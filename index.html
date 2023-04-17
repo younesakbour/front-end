@@ -1,13 +1,303 @@
 <!doctype html>
-<html>
+<html class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Home</title>
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <div class="relative bg-cover bg-center bg-[url('./img/hero-1.jpg')] h-screen">
+    <header class="flex text-gray-50 justify-between items-center px-6 lg:px-24 py-6 border-b-2 border-gray-400/10">
+      <div>
+        <a href="#">
+          <img class="h-7" src="./img/logo.png" alt="Logo">
+        </a>
+      </div>
+      <div>
+        <button id="menu-bt" class="lg:hidden bg-cyan-500 rounded-md py-1 px-3 flex space-x-2">
+          <p class="font-semibold">MENU</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <div id="menu" class="hidden absolute z-10 w-full left-0 mt-6 bg-gray-800 p-4">
+          <ul class="font-mono space-y-4">
+            <li class="pb-1"><a class="tracking-wide" href="#">HOME</a></li>
+            <li class="pb-1"><a class="tracking-wide" href="#">ABOUT</a></li>
+            <li class="pb-1"><a class="tracking-wide" href="#">PORTFOLIO</a></li>
+            <li class="pb-1"><a class="tracking-wide" href="#">SERVICES</a></li>
+            <li class="pb-1"><a class="tracking-wide" href="#">PAGES</a></li>
+            <li class="pb-1"><a class="tracking-wide" href="#">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <nav class="hidden lg:block ml-16">
+        <ul class="hidden lg:flex space-x-10 font-mono">
+          <li class="border-b-2 border-cyan-500 pb-1"><a class="tracking-wide" href="#">HOME</a></li>
+          <li class="transition duration-700 ease-in-out border-b-2 border-cyan-500 border-opacity-0 hover:border-opacity-100 pb-1"><a class="tracking-wide" href="#">ABOUT</a></li>
+          <li class="transition duration-700 ease-in-out border-b-2 border-cyan-500 border-opacity-0 hover:border-opacity-100 pb-1"><a class="tracking-wide" href="#">PORTFOLIO</a></li>
+          <li class="transition duration-700 ease-in-out border-b-2 border-cyan-500 border-opacity-0 hover:border-opacity-100 pb-1"><a class="tracking-wide" href="#">SERVICES</a></li>
+          <li class="transition duration-700 ease-in-out border-b-2 border-cyan-500 border-opacity-0 hover:border-opacity-100 pb-1"><a class="tracking-wide" href="#">PAGES</a></li>
+          <li class="transition duration-700 ease-in-out border-b-2 border-cyan-500 border-opacity-0 hover:border-opacity-100 pb-1"><a class="tracking-wide" href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="hidden lg:block">
+        <ul class="hidden lg:flex space-x-4">
+          <div class="border-l-2 border-gray-400/10 ml-4 pl-6"></div>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dribbble"><circle cx="12" cy="12" r="10"></circle><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"></path></svg></a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="md:flex flex-col absolute bottom-24 md:bottom-0 left-0 px-4 lg:px-24 mb-4 text-gray-50">
+      <div class="md:space-y-8 space-y-6">
+        <h4 class="md:font-mono font-semibold">FOR WEBSITE AND VIDEO EDITING</h4>
+        <div>
+          <h1 class="md:text-6xl text-3xl font-bold">VIDEOGRAPHER’S</h1>
+          <h1 class="md:text-6xl text-3xl font-bold">PORTFOLIO</h1>
+        </div>
+        <button class="font-bold tracking-widest px-8 py-3 transition duration-700 ease-in-out border-2 border-cyan-500 border-y-cyan-500/0 hover:border-y-cyan-500/100">SEE MORE ABOUT US</button>
+      </div>
+      <div class="mt-28">
+        <ul class="flex space-x-4 font-semibold">
+          <li class="border-b-2 border-b-gray-50 pb-1 tracking-widest"><a href="#">01</a></li>
+          <li class="border-b-2 hover:border-b-gray-50 hover:text-gray-50 text-gray-400 border-b-gray-400 pb-1 tracking-widest"><a href="#">02</a></li>
+          <li class="border-b-2 hover:border-b-gray-50 hover:text-gray-50 text-gray-400 border-b-gray-400 pb-1 tracking-widest"><a href="#">03</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="md:h-screen bg-indigo-950 md:grid grid-cols-3 text-gray-50 p-12 lg:p-24">
+    <div class="space-y-8 md:space-y-12 mb-14">
+      <div>
+        <p>OUR SERVICES</p>
+        <p class="md:text-3xl text-2xl font-bold"><span class="border-b-4 md:border-b-0 lg:border-b-4 border-cyan-500 pb-3">WHAT</span> WE DO?</p>
+      </div>
+      <p class="text-gray-400 font-semibold text-sm">If you hire a videographer of our team you will get a video professional to make a custom video for your business and, once the project is over.</p>
+      <button class="font-bold tracking-widest px-8 py-3 transition duration-700 ease-in-out border-2 border-cyan-500 border-y-cyan-500/0 hover:border-y-cyan-500/100">VIEW ALL SERVICES</button>
+    </div>
+    <div class="col-span-2 md:grid grid-cols-2 gap-3 space-y-12 md:space-y-0 md:ml-8">
+      <div class="space-y-4">
+        <div class="border-2 border-cyan-500 p-3 w-fit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-aperture"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+        </div>
+        <p class="text-xl font-bold">Motion graphics</p>
+        <p class="text-gray-400 font-semibold text-sm">Whether you’re halfway through the editing process, or you haven’t even started, our post production services can put the finishing touches.</p>
+      </div>
+      <div class="space-y-4">
+        <div class="border-2 border-cyan-500 p-3 w-fit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-scissors"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
+        </div>
+        <p class="text-xl font-bold">Scriptwriting and editing</p>
+        <p class="text-gray-400 font-semibold text-sm">Whether you’re halfway through the editing process, or you haven’t even started, our post production services can put the finishing touches.</p>
+      </div>
+      <div class="space-y-4">
+        <div class="border-2 border-cyan-500 p-3 w-fit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-video"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+        </div>
+        <p class="text-xl font-bold">Video distribution</p>
+        <p class="text-gray-400 font-semibold text-sm">Whether you’re halfway through the editing process, or you haven’t even started, our post production services can put the finishing touches.</p>
+      </div>
+      <div class="space-y-4">
+        <div class="border-2 border-cyan-500 p-3 w-fit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-film"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+        </div>
+        <p class="text-xl font-bold">Video hosting</p>
+        <p class="text-gray-400 font-semibold text-sm">Whether you’re halfway through the editing process, or you haven’t even started, our post production services can put the finishing touches.</p>
+      </div>
+    </div>
+  </div>
+  <div class="md:h-screen bg-indigo-950 md:grid md:grid-cols-6 grid-flow py-12 md:py-4">
+    <div class="h-64 md:h-auto md:col-span-2 md:mr-2 mb-2 bg-cover bg-center bg-[url('./img/work-1.jpg')]">
+      <div class="h-full flex justify-center items-center">
+        <a href="https://www.youtube.com/watch?v=CX45pYvxDiA&ab_channel=RiulDoamnei">
+          <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-200" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play-circle"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+        </a>
+      </div>
+    </div>
+    <div class="h-64 md:h-auto bg-cover md:mr-2 mb-2 bg-center bg-[url('./img/work-2.jpg')]">
+      <div class="h-full flex justify-center items-center">
+        <a href="https://www.youtube.com/watch?v=CX45pYvxDiA&ab_channel=RiulDoamnei">
+          <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-200" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play-circle"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+        </a>
+      </div>
+    </div>
+    <div class="h-64 md:h-auto bg-cover md:mr-2 mb-2 bg-center bg-[url('./img/work-3.jpg')]">
+      <div class="h-full flex justify-center items-center">
+        <a href="https://www.youtube.com/watch?v=CX45pYvxDiA&ab_channel=RiulDoamnei">
+          <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-200" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play-circle"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+        </a>
+      </div>
+    </div>
+    <div class="h-64 md:h-auto col-span-2 row-span-2 mb-2 md:mb-0 bg-cover bg-center bg-[url('./img/work-4.jpg')]">
+      <div class="h-full flex justify-center items-center">
+        <a href="https://www.youtube.com/watch?v=CX45pYvxDiA&ab_channel=RiulDoamnei">
+          <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-200" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play-circle"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+        </a>
+      </div>
+    </div>
+    <div class="h-64 md:h-auto bg-cover md:mr-2 mb-2 md:mb-0 bg-center bg-[url('./img/work-5.jpg')]">
+      <div class="h-full flex justify-center items-center">
+        <a href="https://www.youtube.com/watch?v=CX45pYvxDiA&ab_channel=RiulDoamnei">
+          <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-200" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play-circle"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+        </a>
+      </div>
+    </div>
+    <div class="h-64 md:h-auto bg-cover md:mr-2 mb-2 md:mb-0 bg-center bg-[url('./img/work-6.jpg')]">
+      <div class="h-full flex justify-center items-center">
+        <a href="https://www.youtube.com/watch?v=CX45pYvxDiA&ab_channel=RiulDoamnei">
+          <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-200" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play-circle"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+        </a>
+      </div>
+    </div>
+    <div class="h-64 md:h-auto col-span-2 md:mr-2 mb-2 md:mb-0 bg-cover bg-center bg-[url('./img/work-7.jpg')]">
+      <div class="h-full flex justify-center items-center">
+        <a href="https://www.youtube.com/watch?v=CX45pYvxDiA&ab_channel=RiulDoamnei">
+          <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-200" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play-circle"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class=" bg-cover bg-center bg-[url('./img/team-bg.jpg')] text-gray-50 lg:px-24 lg:py-10">
+    <div class="flex flex-col">
+      <div class="space-y-1 px-6">
+        <p class="font-semibold tracking-widest">NICE TO MEET</p>
+        <p class="text-4xl font-bold"><span class="border-b-4 md:border-b-0 lg:border-b-4 border-cyan-500 pb-3">OUR</span> TEAM</p>
+      </div>
+      <div class="md:flex">
+        <div class="h-96 mb-4 md:mb-0 mt-20 w-full bg-cover bg-center bg-[url('./img/team-1.jpg')]">
+          <div class="transition duration-700 ease-in-out h-full flex flex-col justify-end items-center opacity-0 hover:opacity-100 shadow-inner shadow-black py-6 space-y-2">
+            <p class="font-semibold text-lg">AMANDA STONE</p>
+            <p class="font-mono text-sm">Videographer</p>
+            <ul class="flex pt-2 space-x-4">
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a></li>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a></li>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a></li>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dribbble"><circle cx="12" cy="12" r="10"></circle><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"></path></svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="h-96 mb-4 md:mb-0 md:mt-16 w-full bg-cover bg-center bg-[url('./img/team-2.jpg')]">
+          <div class="transition duration-700 ease-in-out h-full flex flex-col justify-end items-center opacity-0 hover:opacity-100 shadow-inner shadow-black py-6 space-y-2">
+            <p class="font-semibold text-lg">AMANDA STONE</p>
+            <p class="font-mono text-sm">Videographer</p>
+            <ul class="flex pt-2 space-x-4">
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a></li>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a></li>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a></li>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dribbble"><circle cx="12" cy="12" r="10"></circle><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"></path></svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="h-96 mb-4 md:mb-0 md:mt-10 w-full bg-cover bg-center bg-[url('./img/team-3.jpg')]">
+          <div class="transition duration-700 ease-in-out h-full flex flex-col justify-end items-center opacity-0 hover:opacity-100 shadow-inner shadow-black py-6 space-y-2">
+            <p class="font-semibold text-lg">AMANDA STONE</p>
+            <p class="font-mono text-sm">Videographer</p>
+            <ul class="flex pt-2 space-x-4">
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a></li>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a></li>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a></li>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dribbble"><circle cx="12" cy="12" r="10"></circle><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"></path></svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="h-96 mb-8 md:mb-0 md:mt-4 w-full bg-cover bg-center bg-[url('./img/team-4.jpg')]">
+          <div class="transition duration-700 ease-in-out h-full flex flex-col justify-end items-center opacity-0 hover:opacity-100 shadow-inner shadow-black py-6 space-y-2">
+            <p class="font-semibold text-lg">AMANDA STONE</p>
+            <p class="font-mono text-sm">Videographer</p>
+            <ul class="flex pt-2 space-x-4">
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a></li>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a></li>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a></li>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dribbble"><circle cx="12" cy="12" r="10"></circle><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"></path></svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="md:flex justify-end mx-6 md:mx-0 mb-8 md:mb-0">
+        <button class="font-bold text-sm tracking-widest px-8 py-3 transition duration-700 ease-in-out border-2 border-cyan-500 border-y-cyan-500/0 hover:border-y-cyan-500/100">MEET OUR TEAM</button>
+      </div>
+    </div>
+  </div>
+  <div class="bg-indigo-950 py-12 text-gray-50">
+    <div class="h-96 w-full bg-cover bg-center bg-[url('./img/callto-bg.jpg')]">
+      <div class="pt-24 md:pl-20 px-3 md:pr-96 space-y-8">
+        <p class="text-4xl font-bold md:pr-36">Fresh Ideas, Fresh Moments Giving Wings to your Stories.</p>
+        <p class="font-semibold text-gray-400">INC5000, BEST PLACES TO WORK 2019</p>
+        <button class="bg-cyan-500 transition duration-300 ease-in-out hover:bg-cyan-700 px-10 py-3 font-semibold">START YOUR STORIES</button>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col items-center bg-indigo-950 text-gray-500 py-6 md:py-0">
+    <div class="w-5/6 flex md:justify-between justify-center">
+      <a href="#" class="hidden md:block">
+        <img class="h-7" src="./img/logo.png" alt="Logo">
+      </a>
+      <div>
+        <ul class="flex space-x-4">
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dribbble"><circle cx="12" cy="12" r="10"></circle><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"></path></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="w-5/6 h-px my-8 bg-gray-600 border-0">
+    <div class="w-5/6 md:grid md:grid-cols-6 grid-flow space-y-10 md:space-y-0">
+      <div class="md:col-span-2 space-y-6">
+        <p class="font-semibold text-lg text-gray-50">About us</p>
+        <p>Formed in 2006 by Matt Hobbs and Cael Jones, Videoprah is an award-winning, full-service production company specializing.</p>
+        <div>
+          <a href="#" class="flex items-center space-x-2 text-gray-50 font-semibold">
+            <p>Read more</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+      </div>
+      <div class="space-y-6">
+        <p class="font-semibold text-lg text-gray-50">Who we are</p>
+        <div class="flex flex-col">
+          <a href="#" class="font-mono tracking-wider">Team</a>
+          <a href="#" class="font-mono tracking-wider">Carrers</a>
+          <a href="#" class="font-mono tracking-wider">Contact us</a>
+          <a href="#" class="font-mono tracking-wider">Locations</a>
+        </div>
+      </div>
+      <div class="space-y-6">
+        <p class="font-semibold text-lg text-gray-50">Our work</p>
+        <div class="flex flex-col">
+          <a href="#" class="font-mono tracking-wider">Feature</a>
+          <a href="#" class="font-mono tracking-wider">Latest</a>
+          <a href="#" class="font-mono tracking-wider">Browse Archive</a>
+          <a href="#" class="font-mono tracking-wider">Video for web</a>
+        </div>
+      </div>
+      <div class="md:col-span-2 space-y-6">
+        <p class="font-semibold text-lg text-gray-50">Newsletter</p>
+        <p>Videoprah is an award-winning, full-service production company specializing.</p>
+        <div class="w-full flex items-center">
+          <input class="px-4 py-2 w-4/6" type="email" name="email" placeholder="Email">
+          <button class="w-1/6 p-2 flex justify-center bg-cyan-400 text-gray-50"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></button>
+        </div>
+      </div>
+    </div>
+    <hr class="w-5/6 h-px my-8 bg-gray-600 border-0">
+    <div class="w-5/6 text-center pb-6">
+      <p class="font-light tracking-wide">No Copyright © 2023 All rights reserved | This is just a Clone by <span class="text-cyan-400 font-normal">Me</span> of template made by <span class="text-cyan-400 font-normal">Colorlib</span></p>
+    </div>
+  </div>
 </body>
+<script>
+  const menu_bt = document.getElementById('menu-bt');
+  const menu = document.getElementById('menu');
+
+  menu_bt.addEventListener('click', function () {
+    menu.classList.toggle('hidden');
+  })
+</script>
 </html>
